@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 :root {
   --bg: #07050f;
   --bg2: #0e0a1a;
@@ -26,9 +27,9 @@
   --r: 14px;
   --r2: 20px;
 }
-
+ 
 html { scroll-behavior: smooth; }
-
+ 
 body {
   background: var(--bg);
   color: var(--text);
@@ -36,7 +37,7 @@ body {
   overflow-x: hidden;
   cursor: none;
 }
-
+ 
 .cursor {
   width: 12px; height: 12px;
   background: var(--accent);
@@ -56,13 +57,13 @@ body {
 }
 .cursor.hovered { transform: scale(2.5); background: var(--accent2); }
 .cursor-trail.hovered { border-color: rgba(0,229,255,0.6); transform: scale(1.5); }
-
+ 
 #bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-
+ 
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
-
+ 
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1.4rem 4rem;
@@ -103,7 +104,7 @@ nav.scrolled {
 }
 .nav-hire:hover { background: var(--accent) !important; color: var(--bg) !important; }
 .nav-hire::after { display: none !important; }
-
+ 
 /* HERO */
 .hero {
   position: relative; z-index: 2;
@@ -112,7 +113,7 @@ nav.scrolled {
   padding: 0 4rem; overflow: hidden;
 }
 .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
-
+ 
 .hero-tag {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -129,7 +130,7 @@ nav.scrolled {
   0%,100% { opacity:1; transform:scale(1); }
   50% { opacity:0.4; transform:scale(0.7); }
 }
-
+ 
 .hero-name {
   font-family: 'Playfair Display', serif;
   font-size: clamp(4.5rem, 10vw, 9rem); font-weight: 900;
@@ -141,13 +142,13 @@ nav.scrolled {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, #b388ff 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-
+ 
 .hero-desc {
   font-size: 1.1rem; color: var(--text2); line-height: 1.8;
   max-width: 540px; margin-bottom: 3rem; font-weight: 400;
   opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
 }
-
+ 
 .hero-actions {
   display: flex; gap: 1rem; align-items: center;
   opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
@@ -172,7 +173,7 @@ nav.scrolled {
   transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
 .btn-ghost:hover { border-color: var(--accent); background: rgba(224,64,251,0.08); transform: translateY(-3px); }
-
+ 
 .hero-scroll {
   position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -189,7 +190,7 @@ nav.scrolled {
   50% { transform:scaleY(1); transform-origin:top; opacity:1; }
   100% { transform:scaleY(1); transform-origin:bottom; opacity:0; }
 }
-
+ 
 .hero-floats {
   position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
   display: flex; flex-direction: column; gap: 1rem;
@@ -212,10 +213,10 @@ nav.scrolled {
 .fi-teal { background: rgba(0,229,255,0.2); }
 .float-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; line-height: 1; }
 .float-key { font-size: 0.68rem; color: var(--text3); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
-
+ 
 @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
 @keyframes fadeLeft { from { opacity:0; transform:translateY(-50%) translateX(30px); } to { opacity:1; transform:translateY(-50%) translateX(0); } }
-
+ 
 /* MARQUEE */
 .marquee-wrap {
   position: relative; z-index: 2; overflow: hidden;
@@ -233,12 +234,12 @@ nav.scrolled {
 }
 .marquee-item span { color: var(--accent); font-size: 1rem; }
 @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-
+ 
 /* SECTION BASE */
 .section { position: relative; z-index: 2; padding: 8rem 4rem; max-width: 1200px; margin: 0 auto; }
 .section-full { position: relative; z-index: 2; padding: 8rem 0; background: var(--bg2); }
 .section-full .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 4rem; }
-
+ 
 .label {
   display: inline-flex; align-items: center; gap: 0.7rem;
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
@@ -255,10 +256,10 @@ nav.scrolled {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-
+ 
 .reveal { opacity:0; transform:translateY(40px); transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1); }
 .reveal.visible { opacity:1; transform:none; }
-
+ 
 /* SKILLS */
 .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .skill-card {
@@ -283,7 +284,7 @@ nav.scrolled {
   transition:border-color 0.3s, color 0.3s, background 0.3s;
 }
 .pill:hover { border-color:var(--accent); color:var(--accent); background:rgba(224,64,251,0.08); }
-
+ 
 /* EXPERIENCE */
 .exp-timeline { position:relative; }
 .exp-timeline::before {
@@ -307,7 +308,7 @@ nav.scrolled {
 .exp-card ul { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
 .exp-card li { font-size:0.9rem; color:var(--text2); padding-left:1.5rem; position:relative; line-height:1.65; }
 .exp-card li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-size:0.75rem; top:0.2rem; }
-
+ 
 /* PROJECTS */
 .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
 .project-card {
@@ -332,139 +333,64 @@ nav.scrolled {
 .tag-purple { background:rgba(224,64,251,0.15); color:#f0abfc; }
 .tag-pink { background:rgba(0,229,255,0.12); color:#67e8f9; }
 .tag-green { background:rgba(0,229,255,0.12); color:#67e8f9; }
-.tag-teal { background:rgba(0,229,255,0.15); color:#67e8f9; }
-
-/* SPEAKING / SEMINARS */
-.speaking-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
+ 
+/* SPEAKING */
+.speaking-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .talk-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r2);
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r2); padding: 2rem; position: relative; overflow: hidden;
   transition: border-color 0.4s, transform 0.4s, background 0.4s;
-  display: flex;
-  gap: 1.4rem;
-  align-items: flex-start;
+  display: flex; gap: 1.4rem; align-items: flex-start;
 }
 .talk-card::before {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background: radial-gradient(circle at 100% 0%, rgba(0,229,255,0.07) 0%, transparent 60%);
   opacity: 0; transition: opacity 0.4s;
 }
 .talk-card:hover::before { opacity: 1; }
 .talk-card:hover { border-color: rgba(0,229,255,0.35); transform: translateY(-5px); background: var(--surface2); }
-
-.talk-icon-wrap {
-  width: 52px; height: 52px; border-radius: 14px;
-  background: rgba(0,229,255,0.12);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; flex-shrink: 0;
-}
+.talk-icon-wrap { width: 52px; height: 52px; border-radius: 14px; background: rgba(0,229,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
 .talk-body { flex: 1; }
-.talk-badge {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: #00e5ff; background: rgba(0,229,255,0.1);
-  border: 1px solid rgba(0,229,255,0.2);
-  padding: 0.2rem 0.7rem; border-radius: 40px; margin-bottom: 0.75rem;
-}
-.talk-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.4rem;
-}
-.talk-audience {
-  font-size: 0.8rem; color: var(--text2); line-height: 1.55;
-}
-.talk-venue {
-  display: flex; align-items: center; gap: 0.4rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem; color: var(--text3); margin-top: 0.75rem;
-  letter-spacing: 0.06em;
-}
+.talk-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #00e5ff; background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.2); padding: 0.2rem 0.7rem; border-radius: 40px; margin-bottom: 0.75rem; }
+.talk-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.4rem; }
+.talk-audience { font-size: 0.8rem; color: var(--text2); line-height: 1.55; }
+.talk-venue { display: flex; align-items: center; gap: 0.4rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text3); margin-top: 0.75rem; letter-spacing: 0.06em; }
 .talk-venue::before { content: '📍'; font-size: 0.75rem; }
-
+ 
 /* EDUCATION */
 .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
-.edu-card {
-  background:var(--surface); border:1px solid var(--border); border-radius:var(--r2);
-  padding:2rem; display:flex; gap:1.2rem; align-items:flex-start;
-  transition:border-color 0.3s, transform 0.3s;
-}
+.edu-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r2); padding:2rem; display:flex; gap:1.2rem; align-items:flex-start; transition:border-color 0.3s, transform 0.3s; }
 .edu-card:hover { border-color:var(--border2); transform:translateY(-3px); }
 .edu-icon { width:48px; height:48px; border-radius:12px; background:rgba(224,64,251,0.12); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
 .edu-degree { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; margin-bottom:0.3rem; line-height:1.3; }
 .edu-school { font-size:0.78rem; color:var(--text3); margin-bottom:0.6rem; line-height:1.4; }
 .edu-score { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; padding:0.2rem 0.7rem; background:rgba(179,136,255,0.12); color:var(--accent3); border-radius:4px; letter-spacing:0.05em; }
 .certs-list { display:flex; flex-direction:column; gap:1rem; margin-top:1.5rem; }
-.cert-card {
-  background:var(--surface); border:1px solid var(--border); border-radius:var(--r);
-  padding:1.2rem 1.5rem; display:flex; align-items:center; gap:1rem;
-  transition:border-color 0.3s, transform 0.3s;
-}
+.cert-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:1.2rem 1.5rem; display:flex; align-items:center; gap:1rem; transition:border-color 0.3s, transform 0.3s; }
 .cert-card:hover { border-color:rgba(224,64,251,0.4); transform:translateX(6px); }
 .cert-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
 .cert-title { font-size:0.87rem; color:var(--text); font-weight:500; line-height:1.4; }
 .cert-issuer { font-size:0.72rem; color:var(--text3); margin-top:2px; }
-
+ 
 /* CONTACT */
-.contact-section {
-  position:relative; z-index:2; padding:10rem 4rem; text-align:center; overflow:hidden;
-}
-.contact-glow {
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:600px; height:400px;
-  background:radial-gradient(ellipse, rgba(224,64,251,0.15) 0%, transparent 70%);
-  pointer-events:none;
-}
-.contact-heading {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(3rem,8vw,7rem); font-weight:900;
-  line-height:0.9; letter-spacing:-0.03em; margin-bottom:1.5rem;
-}
-.contact-heading em {
-  font-style:italic;
-  background:linear-gradient(135deg, var(--accent), var(--accent2), #ffcc70);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
+.contact-section { position:relative; z-index:2; padding:10rem 4rem; text-align:center; overflow:hidden; }
+.contact-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:400px; background:radial-gradient(ellipse, rgba(224,64,251,0.15) 0%, transparent 70%); pointer-events:none; }
+.contact-heading { font-family:'Playfair Display',serif; font-size:clamp(3rem,8vw,7rem); font-weight:900; line-height:0.9; letter-spacing:-0.03em; margin-bottom:1.5rem; }
+.contact-heading em { font-style:italic; background:linear-gradient(135deg, var(--accent), var(--accent2), #ffcc70); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .contact-sub { font-size:1rem; color:var(--text2); max-width:480px; margin:0 auto 3rem; line-height:1.8; }
 .contact-cards { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:3rem; }
-.contact-card {
-  background:var(--surface2); border:1px solid var(--border2); border-radius:var(--r);
-  padding:1.2rem 2rem; display:flex; align-items:center; gap:0.9rem;
-  text-decoration:none; color:var(--text); font-size:0.9rem;
-  transition:border-color 0.3s, background 0.3s, transform 0.3s;
-}
+.contact-card { background:var(--surface2); border:1px solid var(--border2); border-radius:var(--r); padding:1.2rem 2rem; display:flex; align-items:center; gap:0.9rem; text-decoration:none; color:var(--text); font-size:0.9rem; transition:border-color 0.3s, background 0.3s, transform 0.3s; }
 .contact-card:hover { border-color:var(--accent); background:rgba(224,64,251,0.1); transform:translateY(-4px); }
 .cc-icon { width:36px; height:36px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:1rem; }
-
-.social-icon-link {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 38px; height: 38px; border-radius: 10px;
-  border: 1px solid var(--border2);
-  color: var(--text2); text-decoration: none;
-  transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.3s;
-  flex-shrink: 0;
-}
+ 
+.social-icon-link { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border2); color: var(--text2); text-decoration: none; transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.3s; flex-shrink: 0; }
 .social-icon-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(224,64,251,0.1); transform: translateY(-3px); }
 .social-icon-link svg { width: 17px; height: 17px; }
-
 .nav-socials { display: flex; gap: 0.6rem; align-items: center; margin-left: 1rem; padding-left: 1.5rem; border-left: 1px solid var(--border2); }
-
-footer {
-  position:relative; z-index:2; border-top:0.5px solid var(--border);
-  padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center;
-  font-size:0.75rem; color:var(--text3); letter-spacing:0.06em;
-}
+ 
+footer { position:relative; z-index:2; border-top:0.5px solid var(--border); padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text3); letter-spacing:0.06em; }
 .footer-socials { display: flex; gap: 0.6rem; align-items: center; }
-
+ 
 @media (max-width: 900px) {
   nav { padding:1.2rem 2rem; }
   .hero { padding:0 2rem; }
@@ -488,11 +414,11 @@ footer {
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-trail" id="cursorTrail"></div>
 <canvas id="bg-canvas"></canvas>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">Prema N</div>
@@ -514,14 +440,17 @@ footer {
     </a>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      Available for opportunities
+    </div>
     <h1 class="hero-name">
-      Technical <br>
-      <span class="line2">Trainer</span>
+      Technical<br>
+      <span class="line2">Trainer.</span>
     </h1>
     <p class="hero-desc">
       BCA graduate skilled in Python, Flask, SQL &amp; modern web technologies.
@@ -558,7 +487,7 @@ footer {
     <div class="scroll-line"></div>
   </div>
 </section>
-
+ 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -588,7 +517,7 @@ footer {
     <span class="marquee-item"><span>✦</span> Full Stack Python</span>
   </div>
 </div>
-
+ 
 <!-- SKILLS -->
 <section class="section" id="skills">
   <div class="label reveal">Technical Arsenal</div>
@@ -628,7 +557,7 @@ footer {
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <div class="section-full" id="experience">
   <div class="section-inner">
@@ -663,7 +592,7 @@ footer {
     </div>
   </div>
 </div>
-
+ 
 <!-- PROJECTS -->
 <section class="section" id="projects">
   <div class="label reveal">Selected Work</div>
@@ -698,14 +627,13 @@ footer {
     </div>
   </div>
 </section>
-
-<!-- SPEAKING / SEMINARS -->
+ 
+<!-- SPEAKING -->
 <div class="section-full" id="speaking">
   <div class="section-inner">
     <div class="label reveal">On Stage</div>
     <h2 class="section-heading reveal">Talks &amp; <em>Seminars</em></h2>
     <div class="speaking-grid">
-
       <div class="talk-card reveal">
         <div class="talk-icon-wrap">🎓</div>
         <div class="talk-body">
@@ -715,7 +643,6 @@ footer {
           <div class="talk-venue">Adichunchanagiri University</div>
         </div>
       </div>
-
       <div class="talk-card reveal" style="transition-delay:0.1s">
         <div class="talk-icon-wrap">🏫</div>
         <div class="talk-body">
@@ -725,7 +652,6 @@ footer {
           <div class="talk-venue">BGS College</div>
         </div>
       </div>
-
       <div class="talk-card reveal" style="transition-delay:0.2s">
         <div class="talk-icon-wrap">🌐</div>
         <div class="talk-body">
@@ -735,7 +661,6 @@ footer {
           <div class="talk-venue">Global Embassy College</div>
         </div>
       </div>
-
       <div class="talk-card reveal" style="transition-delay:0.3s">
         <div class="talk-icon-wrap">📊</div>
         <div class="talk-body">
@@ -745,11 +670,10 @@ footer {
           <div class="talk-venue">GFGC College</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
-
+ 
 <!-- EDUCATION -->
 <div class="section-full" id="education" style="background: var(--bg);">
   <div class="section-inner">
@@ -791,7 +715,7 @@ footer {
     </div>
   </div>
 </div>
-
+ 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-glow"></div>
@@ -801,42 +725,23 @@ footer {
   <div class="contact-cards reveal">
     <a href="mailto:premanagaraj2003@gmail.com" class="contact-card">
       <div class="cc-icon" style="background:rgba(224,64,251,0.15)">✉️</div>
-      <div>
-        <div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Email</div>
-        premanagaraj2003@gmail.com
-      </div>
+      <div><div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Email</div>premanagaraj2003@gmail.com</div>
     </a>
     <a href="tel:+917204862509" class="contact-card">
       <div class="cc-icon" style="background:rgba(179,136,255,0.15)">📱</div>
-      <div>
-        <div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Phone</div>
-        +91 72048 62509
-      </div>
+      <div><div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Phone</div>+91 72048 62509</div>
     </a>
     <div class="contact-card" style="cursor:default">
       <div class="cc-icon" style="background:rgba(0,229,255,0.12)">📍</div>
-      <div>
-        <div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Location</div>
-        Tumkur, Karnataka, India
-      </div>
+      <div><div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">Location</div>Tumkur, Karnataka, India</div>
     </div>
     <a href="https://www.linkedin.com/in/premanagaraj/" target="_blank" rel="noopener" class="contact-card">
-      <div class="cc-icon" style="background:rgba(0,229,255,0.15)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="#00e5ff"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </div>
-      <div>
-        <div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">LinkedIn</div>
-        in/premanagaraj
-      </div>
+      <div class="cc-icon" style="background:rgba(0,229,255,0.15)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#00e5ff"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+      <div><div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">LinkedIn</div>in/premanagaraj</div>
     </a>
     <a href="https://github.com/premaN5" target="_blank" rel="noopener" class="contact-card">
-      <div class="cc-icon" style="background:rgba(255,255,255,0.06)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f0ecff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      </div>
-      <div>
-        <div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">GitHub</div>
-        premaN5
-      </div>
+      <div class="cc-icon" style="background:rgba(255,255,255,0.06)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f0ecff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+      <div><div style="font-size:0.7rem;color:var(--text3);margin-bottom:2px;letter-spacing:0.08em">GitHub</div>premaN5</div>
     </a>
   </div>
   <div class="reveal">
@@ -846,71 +751,47 @@ footer {
     </a>
   </div>
 </section>
-
+ 
 <footer>
-  <span>© 2025 Prema N — Software Developer</span>
+  <span>© 2025 Prema N — Technical Trainer</span>
   <div class="footer-socials">
-    <a href="https://www.linkedin.com/in/premanagaraj/" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    <a href="https://github.com/premaN5" target="_blank" rel="noopener" class="social-icon-link" title="GitHub">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-    </a>
+    <a href="https://www.linkedin.com/in/premanagaraj/" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://github.com/premaN5" target="_blank" rel="noopener" class="social-icon-link" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
   </div>
   <span>Built with passion · Tumkur, Karnataka</span>
 </footer>
-
+ 
 <script>
-/* Custom Cursor */
 const cursor = document.getElementById('cursor');
 const trail = document.getElementById('cursorTrail');
 let mx=0,my=0,tx=0,ty=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX; my=e.clientY;
-  cursor.style.transform=`translate(${mx-6}px,${my-6}px)`;
-});
-(function animateTrail(){
-  tx+=(mx-tx)*0.12; ty+=(my-ty)*0.12;
-  trail.style.transform=`translate(${tx-18}px,${ty-18}px)`;
-  requestAnimationFrame(animateTrail);
-})();
+document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; cursor.style.transform=`translate(${mx-6}px,${my-6}px)`; });
+(function animateTrail(){ tx+=(mx-tx)*0.12; ty+=(my-ty)*0.12; trail.style.transform=`translate(${tx-18}px,${ty-18}px)`; requestAnimationFrame(animateTrail); })();
 document.querySelectorAll('a,button,.skill-card,.project-card,.exp-card,.edu-card,.cert-card,.talk-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cursor.classList.add('hovered');trail.classList.add('hovered');});
-  el.addEventListener('mouseleave',()=>{cursor.classList.remove('hovered');trail.classList.remove('hovered');});
+  el.addEventListener('mouseenter',()=>{ cursor.classList.add('hovered'); trail.classList.add('hovered'); });
+  el.addEventListener('mouseleave',()=>{ cursor.classList.remove('hovered'); trail.classList.remove('hovered'); });
 });
-
-/* Nav scroll */
+ 
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
-
-/* Scroll Reveal */
+ 
 const revealObs=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{
-    if(e.isIntersecting){
-      setTimeout(()=>e.target.classList.add('visible'),i*80);
-      revealObs.unobserve(e.target);
-    }
-  });
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); revealObs.unobserve(e.target); } });
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
-
-/* Particle Canvas */
+ 
 const canvas=document.getElementById('bg-canvas');
 const ctx=canvas.getContext('2d');
-function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
 resize();
 window.addEventListener('resize',resize);
-
+ 
 const particles=Array.from({length:70},()=>({
-  x:Math.random()*canvas.width,
-  y:Math.random()*canvas.height,
-  r:Math.random()*1.5+0.3,
-  dx:(Math.random()-0.5)*0.3,
-  dy:(Math.random()-0.5)*0.3,
-  o:Math.random()*0.5+0.1,
-  color:Math.random()>0.5?'224,64,251':'0,229,255'
+  x:Math.random()*canvas.width, y:Math.random()*canvas.height,
+  r:Math.random()*1.5+0.3, dx:(Math.random()-0.5)*0.3, dy:(Math.random()-0.5)*0.3,
+  o:Math.random()*0.5+0.1, color:Math.random()>0.5?'224,64,251':'0,229,255'
 }));
-
+ 
 (function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   const g1=ctx.createRadialGradient(canvas.width*0.15,canvas.height*0.3,0,canvas.width*0.15,canvas.height*0.3,400);
@@ -939,6 +820,5 @@ const particles=Array.from({length:70},()=>({
   requestAnimationFrame(draw);
 })();
 </script>
-</body>
 </body>
 </html>
